@@ -27,14 +27,14 @@ public class MyAutoStoreService
 - Use the [Result Type](https://en.wikipedia.org/wiki/Result_type) to handle responses without exceptions.
 
 ```c#
-public async void OpenPortExample(short portId)
+public async Task OpenPortExampleAsync(short portId)
 {
     var openPortMessage = OpenPortMsg.Create(portId); // Create message using factory
-    var autostoreResponse = await autostoreInterface.OpenPortAsync(openPortMessage);
+    var autostoreResponse = await autostoreInterface.OpenPortAsync(openPortMessage); // send the message
 
     if (autostoreResponse is null) 
     {
-        // Handle Null response
+        // Handle null response
     }
 
     if (autostoreResponse.Failure)
@@ -48,4 +48,4 @@ public async void OpenPortExample(short portId)
 ```
 
 3. Logging
-- When you implement the proper interfaces required during DI, the library will automatically call the logging functions. That is, you cannot forget to log when using the interfaces provide in the library.
+- When you implement the proper interfaces required during DI, the library will automatically call your logging functions. With proper implementation of those interfaces, you cannot forget to log when using the interfaces provide in the library.
