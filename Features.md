@@ -32,9 +32,9 @@ Simulation Api
 
 - **AutoStoreCommLibrary** is ready for use with the Task Interface and Log Publisher messages. Bin Interface is under construction.
 
-| % Complete | Bin Interface | Task Interface | Shared Interface |
+| Implemented Functions | Bin Interface | Task Interface | Shared Interface |
 | ---------- | ------------- | -------------- | ---------------- |
-| Production Api | 0% | 100% | 50% |
+| Production Api | 74% | 100% | 50% |
 | Simulation Api | 0% | 100% | 50% |
 
 | % Complete | Log Publisher |
