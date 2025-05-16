@@ -1,6 +1,6 @@
 ## Sending Messages
 
-1. Inject the respective interface into your service:
+1. Inject the required interface into your service:
 - `ITaskInterface`
 - `IBinInterface`
 
@@ -35,11 +35,13 @@ public async Task OpenPortExampleAsync(short portId)
     if (autostoreResponse is null) 
     {
         // Handle null response
+        return;
     }
 
     if (autostoreResponse.Failure)
     {
         // Handle Failure response
+        return;
     }
 
     // Handle successful response

@@ -34,8 +34,8 @@ Simulation Api
 
 | Implemented Functions | Bin Interface | Task Interface | Shared Interface |
 | ---------- | ------------- | -------------- | ---------------- |
-| Production Api | 100% | 100% | 50% |
-| Simulation Api | 0% | 100% | 50% |
+| Production Api | 100% | 100% | 100% |
+| Simulation Api | 0% | 100% | 0% |
 
 | % Complete | Log Publisher |
 | ---------- | ------------- |
