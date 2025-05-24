@@ -1,9 +1,9 @@
 
-## What problem does AutoStoreCommLibrary solve?
+## What problem does AsrsCommLibrary solve?
 
-- [AutoStore](https://www.autostoresystem.com/) provides an impressive set of endpoints to interact with their system. However, to develop against that, you must build your own [interface API](https://www.autostoresystem.com/insights/warehouse-control-systems-wcs-ultimate-guide). This requires a lot of work to implement all possible messages. **AutoStoreCommLibrary** solves that problem by implementing all of the endpoints for you in a simple and straightforward way.
+- [AutoStore](https://www.autostoresystem.com/) provides an impressive set of endpoints to interact with their system. However, to develop against that, you must build your own [interface API](https://www.autostoresystem.com/insights/warehouse-control-systems-wcs-ultimate-guide). This requires a lot of work to implement all possible messages. **AsrsCommLibrary** solves that problem by implementing all of the endpoints for you in a simple and straightforward way.
 
-- **AutoStoreCommLibrary** was built with developer experience in mind. Sending and processing messages is quick and easy. You can focus on business logic instead of building API endpoints.
+- **AsrsCommLibrary** was built with developer experience in mind. Sending and processing messages is quick and easy. You can focus on business logic instead of building API endpoints.
 
 - It also includes simulation environments for the task interface that may reduce the number of licenses required to develop a solution that uses **AutoStore**.
 
@@ -30,7 +30,7 @@ Simulation Api
 
 #### Features
 
-- **AutoStoreCommLibrary** is ready for use with the Task, Bin, and Log Publisher Interfaces. The Shared messages are under construction.
+- **AsrsCommLibrary** is ready for use with the Task, Bin, and Log Publisher Interfaces in a production environment.
 
 | Implemented Functions | Bin Interface | Task Interface | Shared Interface |
 | ---------- | ------------- | -------------- | ---------------- |

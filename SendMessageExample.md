@@ -5,7 +5,7 @@
 - `IBinInterface`
 
 ```c#
-public class MyAutoStoreService(ITaskInterface autostoreInterface)
+public class MyAutoStoreService(ITaskInterface taskInterface)
 {
     // ...
 }
@@ -13,10 +13,10 @@ public class MyAutoStoreService(ITaskInterface autostoreInterface)
 ```c#
 public class MyAutoStoreService
 {
-    private readonly ITaskInterface _autostoreInterface;
-    public MyAutoStoreService(ITaskInterface autostoreInterface) 
+    private readonly ITaskInterface _taskInterface;
+    public MyAutoStoreService(ITaskInterface taskInterface) 
     {
-        _autostoreInterface = autostoreInterface;
+        _taskInterface = taskInterface;
     }
     // ...
 }
@@ -30,15 +30,15 @@ public class MyAutoStoreService
 public async Task OpenPortExampleAsync(short portId)
 {
     var openPortMessage = OpenPortMsg.Create(portId); // Create message using factory
-    var autostoreResponse = await autostoreInterface.OpenPortAsync(openPortMessage); // send the message
+    var asrsResponse = await taskInterface.OpenPortAsync(openPortMessage); // send the message
 
-    if (autostoreResponse is null) 
+    if (asrsResponse is null) 
     {
         // Handle null response
         return;
     }
 
-    if (autostoreResponse.Failure)
+    if (asrsResponse.Failure)
     {
         // Handle Failure response
         return;

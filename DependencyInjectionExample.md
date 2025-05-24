@@ -1,12 +1,12 @@
 ## Dependency Injection
 
-- We must define two interfaces to handle Api message logging and Log Publisher message processing. `ILogPublisherMessageHandler` and `ILogAutoStoreApiMessages`
+- We must define two interfaces to handle Api message logging and Log Publisher message processing. `ILogPublisherMessageHandler` and `ILogAsrsApiMessages`
 
 ### Task Interface
 
 Production
 ```c#
-builder.Services.AddAutoStoreTaskInterfaceHttp<AutoStoreLPMessageHandlerLogger, AutoStoreApiMessageHandlerLogger>(options =>
+builder.Services.AddAsrsTaskInterfaceHttp<AsrsLPMessageHandlerLogger, AsrsApiMessageHandlerLogger>(options =>
 {
     options.LogPublisherIp = "127.0.0.1";
     options.LogPublisherPort = 44000;
@@ -16,14 +16,14 @@ builder.Services.AddAutoStoreTaskInterfaceHttp<AutoStoreLPMessageHandlerLogger, 
 
 Simulation
 ```c#
-builder.Services.AddAutoStoreTaskInterfaceSim<AutoStoreLPMessageHandlerLogger, AutoStoreApiMessageHandlerLogger>();
+builder.Services.AddAsrsTaskInterfaceSim<AsrsLPMessageHandlerLogger, AsrsApiMessageHandlerLogger>();
 ```
 
 ### Bin Interface
 
 Production
 ```c#
-builder.Services.AddAutoStoreBinInterfaceHttp<AutoStoreLPMessageHandlerLogger, AutoStoreApiMessageHandlerLogger>(options =>
+builder.Services.AddAsrsBinInterfaceHttp<AsrsLPMessageHandlerLogger, AsrsApiMessageHandlerLogger>(options =>
 {
     options.LogPublisherIp = "127.0.0.1";
     options.LogPublisherPort = 44000;
@@ -34,5 +34,5 @@ builder.Services.AddAutoStoreBinInterfaceHttp<AutoStoreLPMessageHandlerLogger, A
 Simulation (Not currently supported)
 
 ```c#
-builder.Services.AddAutoStoreTaskInterfaceSim<AutoStoreLPMessageHandlerLogger, AutoStoreApiMessageHandlerLogger>();
+builder.Services.AddAsrsTaskInterfaceSim<AsrsLPMessageHandlerLogger, AsrsApiMessageHandlerLogger>();
 ```
